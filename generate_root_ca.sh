@@ -26,3 +26,8 @@ $OPENSSL \
   -key rootca_privkey.pem \
   -days 365 \
   -subj "/O=MyCA"
+
+$OPENSSL \
+  x509 \
+  -in rootca_cert.pem \
+  -noout -subject -dates -fingerprint
